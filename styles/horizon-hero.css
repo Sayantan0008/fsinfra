@@ -1,0 +1,198 @@
+/* Horizon Hero Styles */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 250vh; /* Extended height for scrolling */
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+.side-menu {
+  position: fixed;
+  top: 50%;
+  left: 2rem;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+}
+
+.hero-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  color: #fff;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Removed gradient animation for dark theme */
+
+.title-char {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.title-char:hover {
+  transform: translateY(-10px) scale(1.1);
+}
+
+.hero-subtitle {
+  margin-top: 2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-weight: 300;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.subtitle-line {
+  margin: 0.5rem 0;
+}
+
+.scroll-progress {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.scroll-text {
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  font-weight: 300;
+}
+
+.progress-track {
+  width: 2px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.2);
+  position: relative;
+  border-radius: 1px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(to top, #00d4ff, #ff0080);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+
+.section-counter {
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.scroll-sections {
+  position: relative;
+  z-index: 5;
+}
+
+.content-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.content-section .hero-title {
+  font-size: clamp(2rem, 6vw, 6rem);
+  margin-bottom: 2rem;
+}
+
+.content-section .hero-subtitle {
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .side-menu {
+    left: 1rem;
+  }
+
+  .scroll-progress {
+    bottom: 1rem;
+    right: 1rem;
+  }
+
+  .progress-track {
+    height: 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(2rem, 10vw, 4rem);
+  }
+
+  .hero-subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    height: 250vh;
+  }
+
+  .vertical-text {
+    display: none;
+  }
+
+  .content-section .hero-title {
+    font-size: clamp(1.5rem, 8vw, 3rem);
+  }
+}
