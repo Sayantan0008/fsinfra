@@ -618,7 +618,7 @@ export default function HorizonHero() {
                 </div> */}
 
                 {/* Stats */}
-                <div ref={statsRef} className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12" style={{ visibility: 'hidden' }}>
+                {/* <div ref={statsRef} className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mt-12" style={{ visibility: 'hidden' }}>
                     <div className="text-center">
                         <div className="text-2xl md:text-3xl font-bold text-white mb-1">100+</div>
                         <div className="text-sm text-slate-400 uppercase tracking-wider">Projects</div>
@@ -631,7 +631,7 @@ export default function HorizonHero() {
                         <div className="text-2xl md:text-3xl font-bold text-white mb-1">Army</div>
                         <div className="text-sm text-slate-400 uppercase tracking-wider">Recognized</div>
                     </div>
-                </div>
+                </div> */}
 
                 {/* CTA Buttons */}
                 <div ref={ctaRef} className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center" style={{ visibility: 'hidden' }}>
